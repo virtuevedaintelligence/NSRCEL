@@ -1,0 +1,10 @@
+body {
+  background-color: #edf4fb;
+}
+.search {
+  display: flex;
+  justify-content: flex-end;
+  position: absolute;
+  right: 2rem;
+  border: thin solid #cbd2e8;
+}

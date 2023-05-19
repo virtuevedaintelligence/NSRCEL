@@ -1,11 +1,10 @@
 import { configureStore } from "@reduxjs/toolkit";
-import categoriesSlice from "./slices/CategorySlice";
-import fileSlice from "./slices/FileSlice";
-
+import categoriesSlice from "../store/slices/CategorySlice";
+import fileSlice from "../store/slices/FilesSlice";
 const store = configureStore({
-    reducer: {
-        categories: categoriesSlice,
-        files: fileSlice
-    },
+  reducer: {
+    categories: categoriesSlice,
+    files: fileSlice,
+  },
 });
 export default store;
