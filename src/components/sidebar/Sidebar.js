@@ -8,8 +8,8 @@ import { NavLink } from "react-router-dom";
 const Sidebar = () => {
   return (
     <>
-      <div className="flex">
-        <div className="flex flex-col h-screen p-3 bg-white shadow w-60  z-10">
+      <div className="inline-block">
+        <div className=" flex-col h-screen p-3 bg-white shadow w-60  z-10">
           <div className="space-y-3">
             <div className="flex items-center">
               <h2 className="text-xl font-bold">Stealth</h2>
@@ -26,7 +26,6 @@ const Sidebar = () => {
             </div>
           </div>
         </div>
-        <Navbar />
       </div>
     </>
   );
