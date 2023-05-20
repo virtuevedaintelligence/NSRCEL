@@ -3,9 +3,18 @@ import { useDispatch, useSelector } from "react-redux";
 import "./allitems.css";
 import Item from "../item/Item";
 import ItemHeading from "../itemheading/ItemHeading";
+import { files } from "../../store/slices/FilesSlice";
+
 function AllItems() {
   const dispatch = useDispatch();
-
+  useEffect(() => {
+    dispatch(files());
+  }, []);
+  const filesRes = useSelector((state) => state.files.dataFiles);
+  if (!filesRes) {
+    // Render a loading state or return null if you want to show nothing
+    return <div>Loading...</div>;
+  }
   return (
     <>
       <div className="grid grid-rows-2 grid-flow-col gap-4 alit">
@@ -16,7 +25,9 @@ function AllItems() {
               <table className="table-auto w-full">
                 <ItemHeading />
                 <tbody>
-                  <Item />
+                  {filesRes.map((file) => {
+                    return <Item key={file.id} file={file}></Item>;
+                  })}
                 </tbody>
               </table>
             </div>
