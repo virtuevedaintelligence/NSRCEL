@@ -6,18 +6,18 @@ function DeleteTooltip() {
   const [showTooltip, setShowTooltip] = useState(false);
 
   const handleClick = () => {
+    console.log(showTooltip);
     setShowTooltip(!showTooltip);
   };
 
   return (
     <>
       <span data-tip={showTooltip ? "remove" : ""} data-for="delete-tooltip" className="cursor-pointer" onClick={handleClick}>
-        {/* Replace with your delete icon */}
         <FaTrash />
       </span>
 
       {showTooltip && (
-        <Tooltip id="delete-tooltip" place="right" effect="solid">
+        <Tooltip id="delete-tooltip" place="left" effect="solid">
           <div className="flex flex-col">
             <span>
               <FaTrash /> Remove
