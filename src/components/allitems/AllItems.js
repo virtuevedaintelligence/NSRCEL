@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import "./allitems.css";
 import Item from "../item/Item";
+import ItemHeading from "../itemheading/ItemHeading";
 function AllItems() {
   const dispatch = useDispatch();
 
@@ -13,6 +14,7 @@ function AllItems() {
             All Items
             <div className="overflow-x-auto">
               <table className="table-auto w-full">
+                <ItemHeading />
                 <tbody>
                   <Item />
                 </tbody>
