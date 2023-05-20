@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { FaTrash } from "react-icons/fa";
-import ReactTooltip from "react-tooltip";
+import { Tooltip } from "react-tooltip";
 
 function DeleteTooltip() {
   const [showTooltip, setShowTooltip] = useState(false);
@@ -17,7 +17,7 @@ function DeleteTooltip() {
       </span>
 
       {showTooltip && (
-        <ReactTooltip id="delete-tooltip" place="right" effect="solid">
+        <Tooltip id="delete-tooltip" place="right" effect="solid">
           <div className="flex flex-col">
             <span>
               <FaTrash /> Remove
@@ -27,7 +27,7 @@ function DeleteTooltip() {
               <button className="px-4 py-2 bg-gray-500 text-white rounded">No</button>
             </div>
           </div>
-        </ReactTooltip>
+        </Tooltip>
       )}
     </>
   );
