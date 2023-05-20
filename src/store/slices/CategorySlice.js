@@ -1,8 +1,8 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
-import UserService from "../../service/CategoryService";
+import CategoryService from "../../service/CategoryService";
 
 export const categories = createAsyncThunk("categories-action", async (category) => {
-  const otpResponse = UserService.generateOtp(category);
+  const otpResponse = CategoryService.getCategories();
   return (await otpResponse).data;
 });
 

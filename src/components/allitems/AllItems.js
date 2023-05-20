@@ -1,18 +1,14 @@
 import React, { useEffect } from "react";
-// import { useDispatch, useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import "./allitems.css";
 import { FiSettings } from "react-icons/fi";
 function AllItems() {
-  // const dispatch = useDispatch();
+  const dispatch = useDispatch();
 
-  // useEffect(() => {
-  //   dispatch(categories()); // Dispatch the async thunk to fetch the categories
-  // }, [dispatch]);
-
-  // const categories = useSelector((state) => {
-  //   console.log(state);
-  //   return state.categories;
-  // });
+  const categories = useSelector((state) => {
+    console.log(state);
+    return state.categories;
+  });
 
   return (
     <>
@@ -43,43 +39,11 @@ function AllItems() {
             <div className="w-full flex mb-4">
               CATEGORIES <FiSettings className="mt-1 ml-4" />
             </div>
-            <p>
-              <b>Category 1</b>
-            </p>
-            <ul className="mb-4">
-              <li>
-                <input type="checkbox" /> Label 1
-              </li>
-              <li>
-                <input type="checkbox" /> Label 2
-              </li>
-              <li>
-                <input type="checkbox" /> Label 3
-              </li>
-              <li>
-                <input type="checkbox" /> Label 4
-              </li>
-            </ul>
-            <p>
-              <b>Category 2</b>
-            </p>
-            <ul>
-              <li>
-                <input type="checkbox" /> Label 5
-              </li>
-              <li>
-                <input type="checkbox" /> Label 6
-              </li>
-            </ul>
+            <Categories />
           </div>
           <div class="row-span-3 col-span-4 border ">Table</div>
         </div>
       </div>
-      {/* {Array.isArray(categories) &&
-        categories.dataCategories.map((category) => {
-          console.log("cats", category);
-          return <>{category.Name}</>;
-        })} */}
     </>
   );
 }
