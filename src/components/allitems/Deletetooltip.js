@@ -6,7 +6,6 @@ function DeleteTooltip() {
   const [showTooltip, setShowTooltip] = useState(false);
 
   const handleClick = () => {
-    console.log(showTooltip);
     setShowTooltip(!showTooltip);
   };
 

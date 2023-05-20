@@ -3,20 +3,17 @@ import Label from "../label/Label";
 import Category from "../category/Category";
 
 function Categories({ categories }) {
-    console.log(categories);
-    if (!categories) {
-        // Render a loading state or return null if you want to show nothing
-        return <div>Loading...</div>;
-    }
-    return (
-        <div>
-            {
-                categories.map((category) => {
-                    return <Category key={category.id} category={category}></Category>;
-                })
-            }
-        </div>
-    );
+  if (!categories) {
+    // Render a loading state or return null if you want to show nothing
+    return <div>Loading...</div>;
+  }
+  return (
+    <div>
+      {categories.map((category) => {
+        return <Category key={category.id} category={category}></Category>;
+      })}
+    </div>
+  );
 }
 
 export default Categories;
