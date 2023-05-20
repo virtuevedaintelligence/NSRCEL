@@ -1,7 +1,7 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import CategoryService from "../../service/CategoryService";
 
-export const categories = createAsyncThunk("categories-action", async (category) => {
+export const cate = createAsyncThunk("categories-action", async (category) => {
   const otpResponse = CategoryService.getCategories();
   return (await otpResponse).data;
 });
@@ -14,16 +14,16 @@ const categorySlice = createSlice({
     isErrorCategories: false,
   },
   extraReducers: (builder) => {
-    builder.addCase(categories.pending, (state, action) => {
+    builder.addCase(cate.pending, (state, action) => {
       state.isCategoriesLoading = true;
     });
 
-    builder.addCase(categories.fulfilled, (state, action) => {
+    builder.addCase(cate.fulfilled, (state, action) => {
       state.isCategoriesLoading = false;
       state.dataCategories = action.payload;
     });
 
-    builder.addCase(categories.rejected, (state, action) => {
+    builder.addCase(cate.rejected, (state, action) => {
       state.isErrorCategories = true;
     });
   },

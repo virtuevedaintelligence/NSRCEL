@@ -5,6 +5,13 @@ const CATEGORY_API_BASE_URL = "https://646312614dca1a661353d0ee.mockapi.io/api/C
 class CategoryService {
   getCategories() {
     console.log("in service category");
+
+    console.log("in service category");
+
+    console.log("in service category");
+
+    console.log("in service category");
+    debugger;
     return axios.get(CATEGORY_API_BASE_URL);
   }
 }

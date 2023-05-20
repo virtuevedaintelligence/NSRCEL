@@ -1,10 +1,10 @@
 import React from 'react'
 
-function Label() {
+function Label({ label }) {
     return (
         <div>
             <li>
-                <input type="checkbox" /> Label 1
+                <input type="checkbox" /> {label.Name}
             </li>
         </div>
     )

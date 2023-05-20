@@ -1,10 +1,12 @@
 import React from 'react'
+import Labels from '../labels/Labels'
 
-function Category() {
+function Category({ category }) {
     return (
         <div>
             <p>
-                <b>Category 1</b>
+                {category.Name}
+                <Labels labels={category.Labels} />
             </p>
         </div>
     )
