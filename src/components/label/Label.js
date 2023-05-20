@@ -1,10 +1,10 @@
 import React from "react";
-import "./labels.css";
+import "./label.css";
 function Label({ label }) {
   return (
     <div>
       <li className="cat-lables">
-        <input type="checkbox" /> {label.Name}
+        <input type="checkbox" className="checkbox" /> {label.Name}
       </li>
     </div>
   );

@@ -5,8 +5,9 @@ body {
   display: flex;
   justify-content: flex-end;
   position: absolute;
-  right: 2rem;
+  right: 3rem;
   border: thin solid #cbd2e8;
+  
 }
 
 .sampletd {
